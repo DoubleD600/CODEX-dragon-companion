@@ -1,4 +1,4 @@
-#CODEX Dragon Companion · CODEX龙娘桌宠
+##CODEX Dragon Companion · CODEX龙娘桌宠
 
 轻盈的龙娘桌宠，悬停展开淡紫色圆角活动面板。保留原角色动画，透明边缘和文字使用 Qt 平滑渲染。
 
