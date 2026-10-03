@@ -1,0 +1,17 @@
+{
+  "provider": "codex",
+  "data_root": "",
+  "database": "",
+  "snapshot_file": "",
+  "refresh_seconds": 4,
+  "scale": 1,
+  "font_family": "",
+  "desktop_processes": [
+    "ChatGPT.exe",
+    "Codex.exe"
+  ],
+  "desktop_command": [],
+  "task_url": "codex://threads/{id}",
+  "new_chat_url": "codex://threads/new",
+  "hover_delay_ms": 350
+}

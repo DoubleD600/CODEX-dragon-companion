@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dragon Companion Snapshot",
+  "type": "object",
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "state": {
+            "enum": [
+              "idle",
+              "running",
+              "ready",
+              "blocked",
+              "unknown"
+            ]
+          },
+          "context_used": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "context_window": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "updated_at": {
+            "type": "number"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "rate_limits": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "primary": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "used_percent": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "resets_at": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        },
+        "secondary": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "used_percent": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "resets_at": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

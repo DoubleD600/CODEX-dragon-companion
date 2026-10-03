@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dragon-companion"
+version = "1.0.0"
+description = "A translucent desktop companion with pluggable local task providers"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "ASSETS.md", "third_party/*"]
+dependencies = ["PySide6-Essentials==6.11.2", "psutil==7.2.2"]
+
+[project.scripts]
+dragon-companion = "dragon_companion.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dragon_companion = ["assets/*.ico", "assets/*/*.png", "assets/fonts/*"]
